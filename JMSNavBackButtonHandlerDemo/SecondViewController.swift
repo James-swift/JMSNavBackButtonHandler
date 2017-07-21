@@ -22,6 +22,10 @@ class SecondViewController: UIViewController, JMSNavBackButtonHandlerProtocol {
         // Dispose of any resources that can be recreated.
     }
     
+    deinit {        
+        print("销毁")
+    }
+    
     func setupViews() {
         self.title                = "拦截导航栏返回按钮"
         self.view.backgroundColor = .white

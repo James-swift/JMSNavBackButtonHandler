@@ -25,6 +25,7 @@ extension UINavigationController: UINavigationBarDelegate {
         
         if shouldPop {
             DispatchQueue.main.async {
+                vc?.backDelegate = nil
                 self.popViewController(animated: true)
             }
         }else {

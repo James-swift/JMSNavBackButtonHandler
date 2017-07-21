@@ -20,7 +20,7 @@ extension UIViewController {
         static let jm_backButtonHandlerKey     = UnsafeRawPointer.init(bitPattern: "jm_backButtonHandlerKey".hashValue)
     }
     
-    open weak var backDelegate: JMSNavBackButtonHandlerProtocol? {
+    weak open var backDelegate: JMSNavBackButtonHandlerProtocol? {
         set {
             objc_setAssociatedObject(self, UIViewController.RuntimeKey.jm_backButtonHandlerKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
