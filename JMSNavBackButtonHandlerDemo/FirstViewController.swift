@@ -41,7 +41,7 @@ class FirstViewController: UIViewController {
         btn.addTarget(self, action: #selector(pushVC), for: .touchUpInside)
     }
     
-    func pushVC() {
+    @objc func pushVC() {
         self.navigationController?.pushViewController(SecondViewController(), animated: true)
     }
     
